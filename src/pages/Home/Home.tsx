@@ -7,9 +7,9 @@ const Home = () => {
       <section className={styles.content}>
         <h1>Escolha uma Edição:</h1>
         <div className={styles.cards}>
-          <ChampionshipCard title="TSD 1"/>
-          <ChampionshipCard title="TSD 2"/>
-          <ChampionshipCard title="TSD 3"/>
+          <ChampionshipCard title="TSD 1" to="/tsd/1"/>
+          <ChampionshipCard title="TSD 2" to="/tsd/2"/>
+          <ChampionshipCard title="TSD 3" to="/tsd/3"/>
         </div>
       </section>
     </main>
