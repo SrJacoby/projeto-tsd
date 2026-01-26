@@ -14,7 +14,7 @@ const EditionLayout = () => {
                 <NavLink to="" end className={navLinkClass}>Início</NavLink>
                 <NavLink to="participants" end className={navLinkClass}>Participantes</NavLink>
                 <NavLink to="standings" end className={navLinkClass}>Tabela e Jogos</NavLink>
-                <NavLink to="statistics" end className={navLinkClass}>Estatísticas</NavLink>
+                <NavLink to="stats" end className={navLinkClass}>Estatísticas</NavLink>
                 <NavLink to="news" end className={navLinkClass}>Notícias</NavLink>
                 <NavLink to="awards" end className={navLinkClass}>Premiações</NavLink>
             </nav>

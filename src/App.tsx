@@ -4,7 +4,7 @@ import EditionLayout from "./layouts/EditionLayout/EditionLayout"
 import EditionHome from "./pages/Edition/EditionHome"
 import EditionParticipants from "./pages/Edition/EditionParticipants"
 import EditionStandings from "./pages/Edition/EditionStandings"
-import EditionStatistics from "./pages/Edition/EditionStatistics"
+import EditionStats from "./pages/Edition/EditionStats"
 import EditionNews from "./pages/Edition/EditionNews"
 import EditionAwards from "./pages/Edition/EditionAwards"
 
@@ -20,7 +20,7 @@ function App() {
       <Route index element={<EditionHome/>}></Route>
       <Route path="participants" element={<EditionParticipants/>}></Route>
       <Route path="standings" element={<EditionStandings/>}></Route>
-      <Route path="statistics" element={<EditionStatistics/>}></Route>
+      <Route path="stats" element={<EditionStats/>}></Route>
       <Route path="news" element={<EditionNews/>}></Route>
       <Route path="awards" element={<EditionAwards/>}></Route>
     </Route>
