@@ -59,3 +59,31 @@
     text-align: right;
 }
 
+.subtitle{
+    margin: 16px 0 8px;
+    font-size: 1.1rem;
+    color: #222;
+    text-align: center;
+}
+
+.card{
+    width: 100%;
+    margin-top: 12px;
+}
+
+.cardHeader{
+    width: 100%;
+    background-color: #e6e6e6;
+    border: none;
+    padding: 10px 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.star{
+    color: #f5b400;
+    margin-left: 6px;
+}
