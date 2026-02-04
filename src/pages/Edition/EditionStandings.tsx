@@ -1,9 +1,14 @@
 import { useParams } from "react-router-dom"
 import { editionMatchesData } from "../../data/editionMatchesData"
+import EditionStandingsComponent from "../../components/EditionStandingsComponent/EditionStandingsComponent"
 import styles from './EditionStandings.module.css'
 
 const EditionStandings = () => {
-  const {editionID} = useParams()
+  const {editionID} = useParams<{editionID: string}>()
+
+  if(!editionID){
+    return <p>Edição inválida</p>
+  }
   const data = editionMatchesData[editionID ?? ""]
 
   if(!data) {
@@ -12,6 +17,7 @@ const EditionStandings = () => {
 
   return (
     <div className={styles.page}>
+      <EditionStandingsComponent editionID={editionID}/>
       <h2 className={styles.title}>Jogos</h2>
 
       {data.rounds.map((round) => (
