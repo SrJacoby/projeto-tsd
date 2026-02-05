@@ -1,6 +1,7 @@
 import { editionStandingsData } from "../../data/editionStandingsData";
 import { editionMatchesData } from "../../data/editionMatchesData";
 import { buildTable } from "../../utils/buildTable";
+import styles from "./EditionStandingsComponent.module.css"
 
 type Props = {
     editionID: string
@@ -13,35 +14,37 @@ const EditionStandingsComponent = ({editionID}: Props) => {
     if(!standings || !matches) return null
 
   return (
-    <div>
+    <div className={styles.container}>
         {standings.groups.map((group) => {
             const table = buildTable(group.teams, matches.rounds)
             return(
-                <section key={group.name}>
-                    <h3>{group.name}</h3>
+                <section key={group.name} className={styles.group}>
+                    <h3 className={styles.groupTitle}>{group.name}</h3>
 
-                    <div>
-                        <div>
-                            <span>Time</span>
-                            <span>P</span>
-                            <span>J</span>
-                            <span>V</span>
-                            <span>D</span>
-                            <span>GM</span>
-                            <span>GS</span>
-                            <span>SG</span>
+                    <div className={styles.table}>
+                        <div className={`${styles.row} ${styles.header}`}>
+                            <span className={styles.team}>Time</span>
+                            <span className={styles.value}>P</span>
+                            <span className={styles.value}>J</span>
+                            <span className={styles.value}>V</span>
+                            <span className={styles.value}>E</span>
+                            <span className={styles.value}>D</span>
+                            <span className={styles.value}>GM</span>
+                            <span className={styles.value}>GS</span>
+                            <span className={styles.value}>SG</span>
                         </div>
 
                         {table.map((team) => (
-                            <div key={team.team}>
-                                <span>{team.team}</span>
-                                <span>{team.J}</span>
-                                <span>{team.V}</span>
-                                <span>{team.E}</span>
-                                <span>{team.D}</span>
-                                <span>{team.GM}</span>
-                                <span>{team.GS}</span>
-                                <span>{team.SG}</span>
+                            <div key={team.team} className={styles.row}>
+                                <span className={styles.team}>{team.team}</span>
+                                <span className={styles.value}>{team.P}</span>
+                                <span className={styles.value}>{team.J}</span>
+                                <span className={styles.value}>{team.V}</span>
+                                <span className={styles.value}>{team.E}</span>
+                                <span className={styles.value}>{team.D}</span>
+                                <span className={styles.value}>{team.GM}</span>
+                                <span className={styles.value}>{team.GS}</span>
+                                <span className={styles.value}>{team.SG}</span>
                             </div>
                         ))}
                     </div>
