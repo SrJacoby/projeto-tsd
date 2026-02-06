@@ -31,5 +31,57 @@ export const editionStandingsData: Record<string, EditionStandingsData> = {
                 ],
             },
         ]
-    }
+    },
+
+    "2": {
+        groups: [
+            {
+                name: "Primeira Fase",
+                teams: [
+                    "Inglaterra",
+                    "Portugal",
+                    "Brasil",
+                    "França",
+                    "Espanha",
+                    "Uruguai",
+                    "Argentina",
+                    "Itália",
+                    "Rússia",
+                    "Holanda",
+                ],
+            },
+        ]
+    },
+
+    "3": {
+        groups: [
+            {
+                name: "Grupo A",
+                teams: [
+                    "Brasil",
+                    "França",
+                    "Paraíba",
+                    "Rio Grande do Sul",
+                ],
+            },
+            {
+                name: "Grupo B",
+                teams: [
+                    "Bahia",
+                    "Itália",
+                    "Minas Gerais",
+                    "São Paulo",
+                ],
+            },
+            {
+                name: "Grupo C",
+                teams: [
+                    "Espanha",
+                    "Pernambuco",
+                    "Santa Catarina",
+                ],
+            },
+        ]
+    },
+
 }
