@@ -93,7 +93,7 @@ export const editionMatchesData: Record<string, EditionMatchesData> = {
                     {home: "Holanda", away: "Portugal", homeGoals: 0, awayGoals: 2},
                 ],
             },
-        ]
+        ],
     },
 
     "2": {

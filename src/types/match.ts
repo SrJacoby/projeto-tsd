@@ -10,6 +10,14 @@ export type Round = {
     matches: Match[]
 }
 
+export type KnockoutStage = {
+    quarterFinals?: Match[]
+    semiFinals?: Match[]
+    final?: Match
+    thirdPlaceMatch?: Match
+}
+
 export type EditionMatchesData = {
     rounds: Round[]
+    knockout?: KnockoutStage
 }

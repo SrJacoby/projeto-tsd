@@ -13,19 +13,16 @@ const EditionStandingsComponent = ({ editionID }: Props) => {
 
   if (!standings || !matches) return null
 
-  // 👉 todos os times da edição (necessário para o TSD 3)
   const allTeams = standings.groups.flatMap(group => group.teams)
 
   return (
     <div className={styles.container}>
       {standings.groups.map(group => {
-        // 🔹 no TSD 3 a tabela considera TODOS os times
         const teamsForTable =
           editionID === "3" ? allTeams : group.teams
 
         const fullTable = buildTable(teamsForTable, matches.rounds)
 
-        // 🔹 mas visualmente mostramos apenas os times do grupo
         const table =
           editionID === "3"
             ? fullTable.filter(team =>
