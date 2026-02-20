@@ -84,45 +84,27 @@ const EditionStandings = () => {
 
   // ---------- TSD 3 ----------
   if (editionID === "3") {
-    const allTables = groups.map((group) =>
-      getQualifiedTeams(group, data.rounds, group.teams.length)
+    const allTeams = groups.flatMap(group => group.teams)
+    
+    const generalTable = getQualifiedTeams(
+      {
+        teams: allTeams,
+        name: ""
+      },
+      data.rounds,
+      allTeams.length
     )
 
-    const firstAndSeconds = allTables.flatMap((table) =>
-      table.slice(0, 2)
-    )
-
-    const thirds = allTables
-      .map((table) => table[2])
-      .filter(Boolean)
-
-    const bestThirds = thirds
-      .sort(
-        (a, b) =>
-          b.P - a.P || b.SG - a.SG || b.GM - a.GM
-      )
-      .slice(0, 2)
-
-    const qualifiedTeams = [
-      ...firstAndSeconds,
-      ...bestThirds,
-    ]
-      .sort(
-        (a, b) =>
-          b.P - a.P || b.SG - a.SG || b.GM - a.GM
-      )
-      .map((t) => t.team)
+    const ranking = generalTable.slice(0,8).map(t => t.team)
 
     const baseKnockout = buildKnockoutByRanking(
-      qualifiedTeams,
+      ranking,
       true
     )
 
     const scores = editionKnockoutData[editionID]
 
-    const withScores = scores
-      ? applyKnockoutScores(baseKnockout, scores)
-      : baseKnockout
+    const withScores = scores ? applyKnockoutScores(baseKnockout, scores):baseKnockout
 
     knockout = resolveKnockoutWinners(withScores)
   }

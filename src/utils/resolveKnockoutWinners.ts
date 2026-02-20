@@ -20,6 +20,12 @@ function getWinner(match: KnockoutMatch): string {
   return "A definir"
 }
 
+function getLoser(match: KnockoutMatch): string | null {
+  const winner = getWinner(match)
+  if(!winner) return null
+  return winner === match.home ? match.away : match.home
+}
+
 export function resolveKnockoutWinners(knockout: {
   quarterFinals: KnockoutMatch[]
   semiFinals: KnockoutMatch[]
@@ -45,20 +51,15 @@ export function resolveKnockoutWinners(knockout: {
     away: getWinner(semiFinals[1]),
   }
 
-  const thirdPlaceMatch =
-    knockout.thirdPlaceMatch
-      ? {
-          ...knockout.thirdPlaceMatch,
-          home:
-            getWinner(semiFinals[0]) === final.home
-              ? final.away
-              : final.home,
-          away:
-            getWinner(semiFinals[1]) === final.home
-              ? final.away
-              : final.home,
-        }
-      : undefined
+  let thirdPlaceMatch = knockout.thirdPlaceMatch
+
+  if(thirdPlaceMatch) {
+    thirdPlaceMatch = {
+      ...thirdPlaceMatch,
+      home: getLoser(semiFinals[0]) ?? "A definir",
+      away: getLoser(semiFinals[1]) ?? "A definir",
+    }
+  }
 
   return {
     ...knockout,

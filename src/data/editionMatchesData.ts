@@ -270,7 +270,7 @@ export const editionMatchesData: Record<string, EditionMatchesData> = {
                     {home: "Pernambuco", away: "Brasil", homeGoals: 2, awayGoals: 2},
                     {home: "Bahia", away: "Santa Catarina", homeGoals: 2, awayGoals: 1},
                     {home: "Itália", away: "Rio Grande do Sul", homeGoals: 0, awayGoals: 0},
-                    {home: "São Paulo", away: "França", homeGoals: 0, awayGoals: 2},
+                    {home: "São Paulo", away: "França", homeGoals: 0, awayGoals: 1},
                 ],
             },
             {

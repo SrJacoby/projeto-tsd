@@ -101,6 +101,8 @@ export function buildKnockoutByRanking(
     { home: "A definir", away: "A definir", homeGoals: null, awayGoals: null },
   ]
 
+  console.log(ranking)
+
   const final: KnockoutMatch = {
     home: "A definir",
     away: "A definir",

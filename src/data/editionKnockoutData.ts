@@ -39,22 +39,22 @@ export const editionKnockoutData: Record<string, KnockoutScores> = {
   },
   "3": {
     quarterFinals: [
-      { homeGoals: 0, awayGoals: 1 },
       { homeGoals: 2, awayGoals: 1 },
-      { homeGoals: 2, awayGoals: 1},
+      { homeGoals: 2, awayGoals: 2, homePenalties: 2, awayPenalties: 0 },
+      { homeGoals: 1, awayGoals: 2},
       { homeGoals: 0, awayGoals: 1 },
     ],
     semiFinals: [
+      { homeGoals: 4, awayGoals: 3 },
       { homeGoals: 1, awayGoals: 2 },
-      { homeGoals: 3, awayGoals: 4 },
     ],
     thirdPlaceMatch: {
       homeGoals: 4,
       awayGoals: 3,
     },
     final: {
-        homeGoals: 2,
-        awayGoals: 1
+        homeGoals: 1,
+        awayGoals: 2
     }
   },
 }
