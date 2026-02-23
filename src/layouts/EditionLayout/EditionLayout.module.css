@@ -1,30 +1,40 @@
-.page{
+.page {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--edition-background, #fafafa);
+    color: var(--edition-text, #333);
 }
 
-/* Cabeçalho e Menu */
+/* ========================= */
+/* Cabeçalho / Header        */
+/* ========================= */
 
 .header {
-    background-color: #e5e5e5;
+    background-color: var(--edition-card-bg, #e5e5e5);
     padding: 20px 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border-bottom: 2px solid var(--edition-divider, #d0d0d0);
 }
 
-.logo{
+/* Logo */
+
+.logo {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 14px;
-    color: #222;
+    color: var(--edition-text-strong, #222);
     text-decoration: none;
+    letter-spacing: 0.5px;
 }
 
-/* Menu */
+/* ========================= */
+/* Menu de Navegação         */
+/* ========================= */
 
-.nav{
+.nav {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
@@ -32,25 +42,47 @@
     width: 100%;
 }
 
-.link{
+/* Links */
+
+.link {
     text-decoration: none;
-    color: #333;
+    color: var(--edition-text, #333);
     padding: 8px 14px;
     border-radius: 8px;
-
-    transition: background-color 0.2s, color 0.2s;
+    font-size: 0.95rem;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
+
+/* Hover */
 
 .nav a:hover {
-    background-color: #d6d6d6;
+    background-color: color-mix(
+        in srgb,
+        var(--edition-accent, #999) 20%,
+        transparent
+    );
+    color: var(--edition-accent-strong, #111);
 }
 
-.active{
-    background-color: #c8c8c8;
-    color: #111;
+/* Link ativo */
+
+.active {
+    background-color: color-mix(
+        in srgb,
+        var(--edition-accent, #999) 35%,
+        transparent
+    );
+    color: var(--edition-accent-strong, #111);
+    font-weight: 600;
 }
 
-.content{
+/* ========================= */
+/* Conteúdo principal        */
+/* ========================= */
+
+.content {
     flex: 1;
     padding: 24px;
     overflow-y: auto;
@@ -58,7 +90,31 @@
     justify-content: center;
 }
 
-.content > *{
+.content > * {
     width: 100%;
     max-width: 900px;
+}
+
+/* ========================= */
+/* Responsivo                */
+/* ========================= */
+
+@media (max-width: 600px) {
+    .header {
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 12px;
+    }
+
+    .nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .link {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
 }

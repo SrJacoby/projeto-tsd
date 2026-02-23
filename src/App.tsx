@@ -17,12 +17,12 @@ function App() {
     {/* Página das edições */}
 
     <Route path="/tsd/:editionID" element={<EditionLayout />}>
-      <Route index element={<EditionHome/>}></Route>
-      <Route path="participants" element={<EditionParticipants/>}></Route>
-      <Route path="standings" element={<EditionStandings/>}></Route>
-      <Route path="stats" element={<EditionStats/>}></Route>
-      <Route path="news" element={<EditionNews/>}></Route>
-      <Route path="awards" element={<EditionAwards/>}></Route>
+      <Route index element={<EditionHome />} />
+      <Route path="participants" element={<EditionParticipants />} />
+      <Route path="standings" element={<EditionStandings />} />
+      <Route path="stats" element={<EditionStats />} />
+      <Route path="news" element={<EditionNews />} />
+      <Route path="awards" element={<EditionAwards />} />
     </Route>
   </Routes>
   )

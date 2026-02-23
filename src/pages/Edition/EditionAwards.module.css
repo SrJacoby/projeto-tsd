@@ -1,79 +1,91 @@
-.page{
+.page {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 32px;
 }
 
-.container{
+.container {
     margin-bottom: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.title{
+.title {
     margin-bottom: 12px;
     font-size: 1.25rem;
-    color: #222;
+    color: var(--edition-text-strong);
     text-align: center;
 }
 
-.table{
+.table {
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: var(--edition-card-bg);
     border-radius: 8px;
     overflow: hidden;
 }
 
-.row{
+.row {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     padding: 10px 16px;
-    border-top: 1px solid #d0d0d0;
-    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid var(--edition-divider);
+    border-bottom: 1px solid var(--edition-divider);
     font-size: 0.95rem;
-    color: #333;
+    color: var(--edition-text);
 }
 
-.row + .row{
+.row + .row {
     border-top: none;
 }
 
-.header{
+.header {
     font-weight: 600;
-    background-color: #e6e6e6;
+    background-color: color-mix(
+        in srgb,
+        var(--edition-accent) 18%,
+        var(--edition-card-bg)
+    );
+    color: var(--edition-text-strong);
 }
 
-.left{
+.left {
     text-align: left;
     font-weight: 600;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
-.right{
+.right {
     text-align: right;
 }
 
-.subtitle{
+.subtitle {
     margin: 16px 0 8px;
     font-size: 1.1rem;
-    color: #222;
+    color: var(--edition-text-strong);
     text-align: center;
 }
 
-.card{
+.card {
     width: 100%;
     margin-top: 12px;
+    background-color: var(--edition-card-bg);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.cardHeader{
+.cardHeader {
     width: 100%;
-    background-color: #e6e6e6;
+    background-color: color-mix(
+        in srgb,
+        var(--edition-accent) 12%,
+        var(--edition-card-bg)
+    );
     border: none;
     padding: 10px 16px;
     font-weight: 600;
@@ -81,9 +93,18 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    color: var(--edition-text-strong);
 }
 
-.star{
-    color: #f5b400;
+.cardHeader:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--edition-accent) 22%,
+        var(--edition-card-bg)
+    );
+}
+
+.star {
+    color: var(--edition-accent-strong);
     margin-left: 6px;
 }

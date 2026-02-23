@@ -15,6 +15,7 @@ import {
 import { applyKnockoutScores } from "../../utils/applyKnockoutScores"
 import { resolveKnockoutWinners } from "../../utils/resolveKnockoutWinners"
 
+import EditionTheme from '../../layouts/EditionTheme/EditionTheme'
 import styles from "./EditionStandings.module.css"
 
 const EditionStandings = () => {
@@ -127,6 +128,7 @@ const EditionStandings = () => {
       : null
 
   return (
+    <EditionTheme>
     <div className={styles.page}>
       <EditionStandingsComponent editionID={editionID} />
 
@@ -287,6 +289,7 @@ const EditionStandings = () => {
         </ul>
       </section>
     </div>
+    </EditionTheme>
   )
 }
 

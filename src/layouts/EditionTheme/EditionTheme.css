@@ -1,0 +1,24 @@
+:root {
+  --primary: #6b7280;
+  --card-bg: #ffffff;
+  --text-strong: #111827;
+}
+
+/* Componentes genéricos do torneio */
+.edition-page {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.edition-card {
+  background: var(--card-bg);
+}
+
+.edition-title,
+.edition-subtitle {
+  color: var(--text-strong);
+}
+
+.edition-accent {
+  color: var(--primary);
+}

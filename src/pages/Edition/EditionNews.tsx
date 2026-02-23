@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState } from "react"
 import styles from './EditionNews.module.css'
 import { editionNewsData } from "../../data/editionNewsData"
+import EditionTheme from '../../layouts/EditionTheme/EditionTheme'
 
 const EditionNews = () => {
   const {editionID} = useParams()
@@ -20,6 +21,7 @@ const EditionNews = () => {
   }
 
   return (
+    <EditionTheme>
     <div className={styles.page}>
         <section className={styles.container}>
           {/* Coluna Principal */}
@@ -71,6 +73,7 @@ const EditionNews = () => {
 
         </section>
     </div>
+    </EditionTheme>
   )
 }
 

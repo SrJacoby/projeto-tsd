@@ -1,61 +1,71 @@
-.container{
-    width: 100%;
-    max-width: 900px;
-    margin-bottom: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 32px;
 }
 
-.group{
-    background-color: #f3f3f3;
-    border-radius: 8px;
-    overflow: hidden;
+.group {
+  background-color: var(--edition-card-bg);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.groupTitle{
-    padding: 12px 16px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    background-color: #e6e6e6;
-    color: #222;
+.groupTitle {
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: color-mix(
+    in srgb,
+    var(--edition-accent) 20%,
+    #ffffff
+  );
+  color: var(--edition-text-strong);
 }
 
-.table{
-    width: 100%;
+.table {
+  width: 100%;
 }
 
-.row{
-    display: grid;
-    grid-template-columns: 2fr repeat(8, 40px);
-    align-items: center;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    color: #333;
-    border-top: 1px solid #d0d0d0;
+.row {
+  display: grid;
+  grid-template-columns: 2fr repeat(8, 40px);
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: var(--edition-text);
+  border-top: 1px solid var(--edition-divider);
 }
 
-.row + .row{
-    border-top: none;
+.row + .row {
+  border-top: none;
 }
 
-.header{
-    font-weight: 600;
-    background-color: #ededed;
+.header {
+  font-weight: 600;
+  background-color: color-mix(
+    in srgb,
+    var(--edition-accent) 15%,
+    #ffffff
+  );
+  color: var(--edition-text-strong);
 }
 
-.team{
-    text-align: left;
-    font-weight: 500;
+.team {
+  text-align: left;
+  font-weight: 500;
 }
 
-.value{
-    text-align: center;
+.value {
+  text-align: center;
 }
 
-@media (max-width: 700px){
-    .row{
-        grid-template-columns: 1.5fr repeat(8, 32px);
-        font-size: 0.8rem;
-    }
+@media (max-width: 700px) {
+  .row {
+    grid-template-columns: 1.5fr repeat(8, 32px);
+    font-size: 0.8rem;
+  }
 }
