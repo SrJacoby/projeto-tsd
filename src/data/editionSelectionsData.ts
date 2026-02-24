@@ -13,7 +13,7 @@ export type SelectionBlock = {
 export type EditionSelectionsData = {
     tournamentSelection: SelectionPlayer[]
     rounds: SelectionBlock[]
-    knouckout: SelectionBlock[]
+    knockout: SelectionBlock[]
 }
 
 const POSITIONS = [
@@ -140,10 +140,10 @@ export const editionSelectionsData: Record<string, EditionSelectionsData> = {
             {position: "Meia", name: "Pelé", team: "Brasil"},
             {position: "Meia", name: "De Paul", team: "Argentina"},
             {position: "Meia", name: "Mazzola", team: "Itália"},
-            {position: "Atacante", name: "Thomas Müller", team: "Alemanhas"},
+            {position: "Atacante", name: "Thomas Müller", team: "Alemanha"},
             {position: "Atacante", name: "Roberto Firmino", team: "Brasil"},
             {position: "Atacante", name: "Raphinha", team: "Brasil", isStar: true},
-            {position: "Treinador", name: "Murillo", team: "BRasil"},
+            {position: "Treinador", name: "Murillo", team: "Brasil"},
             ]},
 
             {title: "Rodada 7", players: [
@@ -208,7 +208,7 @@ export const editionSelectionsData: Record<string, EditionSelectionsData> = {
 
         ],
 
-        knouckout: [
+        knockout: [
             {title: "Quartas de Final", players: [
             {position: "Goleiro", name: "Courtois", team: "Inglaterra"},
             {position: "Lateral-Esquerdo", name: "Shaw", team: "Inglaterra"},
@@ -425,7 +425,7 @@ export const editionSelectionsData: Record<string, EditionSelectionsData> = {
 
         ],
 
-        knouckout: [
+        knockout: [
             {title: "Quartas de Final", players: [
             {position: "Goleiro", name: "Donnarumma", team: "Itália"},
             {position: "Lateral-Esquerdo", name: "Tagliafico", team: "Argentina"},
@@ -671,7 +671,7 @@ export const editionSelectionsData: Record<string, EditionSelectionsData> = {
             ]},
         ],
 
-        knouckout: [
+        knockout: [
             {title: "Quartas de Final", players: [
             {position: "Goleiro", name: "Dida", team: "Bahia"},
             {position: "Lateral-Esquerdo", name: "Nilton Santos", team: "Brasil"},

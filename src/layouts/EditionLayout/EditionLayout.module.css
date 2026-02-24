@@ -6,10 +6,6 @@
     color: var(--edition-text, #333);
 }
 
-/* ========================= */
-/* Cabeçalho / Header        */
-/* ========================= */
-
 .header {
     background-color: var(--edition-card-bg, #e5e5e5);
     padding: 20px 24px;
@@ -19,20 +15,14 @@
     border-bottom: 2px solid var(--edition-divider, #d0d0d0);
 }
 
-/* Logo */
-
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 14px;
     color: var(--edition-text-strong, #222);
     text-decoration: none;
     letter-spacing: 0.5px;
 }
-
-/* ========================= */
-/* Menu de Navegação         */
-/* ========================= */
 
 .nav {
     display: flex;
@@ -41,8 +31,6 @@
     justify-content: center;
     width: 100%;
 }
-
-/* Links */
 
 .link {
     text-decoration: none;
@@ -55,8 +43,6 @@
         color 0.2s ease;
 }
 
-/* Hover */
-
 .nav a:hover {
     background-color: color-mix(
         in srgb,
@@ -65,8 +51,6 @@
     );
     color: var(--edition-accent-strong, #111);
 }
-
-/* Link ativo */
 
 .active {
     background-color: color-mix(
@@ -77,10 +61,6 @@
     color: var(--edition-accent-strong, #111);
     font-weight: 600;
 }
-
-/* ========================= */
-/* Conteúdo principal        */
-/* ========================= */
 
 .content {
     flex: 1;
@@ -94,10 +74,6 @@
     width: 100%;
     max-width: 900px;
 }
-
-/* ========================= */
-/* Responsivo                */
-/* ========================= */
 
 @media (max-width: 600px) {
     .header {

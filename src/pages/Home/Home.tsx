@@ -13,6 +13,8 @@ const Home = () => {
           <ChampionshipCard title="TSD 1" to="/tsd/1" />
           <ChampionshipCard title="TSD 2" to="/tsd/2" />
           <ChampionshipCard title="TSD 3" to="/tsd/3" />
+          <ChampionshipCard title="Ranking Jogadores" to="/ranking-players" />
+          <ChampionshipCard title="Ranking Treinadores" to="/ranking-managers" />
         </div>
       </section>
     </main>

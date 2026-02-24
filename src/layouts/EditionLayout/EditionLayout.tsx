@@ -16,10 +16,10 @@ const EditionLayout = () => {
 
           <nav className={styles.nav}>
             <NavLink to="" end className={navLinkClass}>Início</NavLink>
+            <NavLink to="news" className={navLinkClass}>Notícias</NavLink>
             <NavLink to="participants" className={navLinkClass}>Participantes</NavLink>
             <NavLink to="standings" className={navLinkClass}>Tabela e Jogos</NavLink>
             <NavLink to="stats" className={navLinkClass}>Estatísticas</NavLink>
-            <NavLink to="news" className={navLinkClass}>Notícias</NavLink>
             <NavLink to="awards" className={navLinkClass}>Premiações</NavLink>
           </nav>
         </header>
