@@ -64,7 +64,7 @@ export const editionNewsData: Record<string, EditionNewsData> = {
     "2": {
         featured: [
             {
-                id: 3,
+                id: 1,
                 title: "Argentina eliminada em jogo dramático",
                 summary: "Mesmo após empatar no último lance do tempo normal e levar o jogo para prorrogação, os argentinos são batidos pela França.",
                 date: "08/03/2023"

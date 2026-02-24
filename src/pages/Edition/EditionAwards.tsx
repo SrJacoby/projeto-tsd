@@ -97,7 +97,7 @@ const ToggleSelection = ({block}: {block: SelectionBlock}) => {
             ))}
 
             {/* Mata-Mata */}
-            {selections.knouckout.map((block, index) => (
+            {selections.knockout.map((block, index) => (
               <ToggleSelection key={`knockout-${index}`} block={block} />
             ))}
           </section>
