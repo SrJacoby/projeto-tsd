@@ -24,7 +24,8 @@
 .title{
     margin-bottom: 16px;
     font-size: 1.25rem;
-    color: var(--text-strong)
+    color: var(--text-strong);
+    text-align: center;
 }
 
 .table{
