@@ -7,7 +7,7 @@ const Home = () => {
     <EditionTheme>
     <main className={styles.page}>
       <section className={styles.content}>
-        <h1 className={styles.title}>Escolha uma Edição:</h1>
+        <h1 className={styles.title}>Escolha uma Opção:</h1>
 
         <div className={styles.cards}>
           <ChampionshipCard title="TSD 1" to="/tsd/1" />
